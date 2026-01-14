@@ -921,11 +921,10 @@ nav {
     }
     
     .stat-quick-number {
-        font-size: 3rem;
-    }
-}padding: 100px 5%;
+    font-size: 3rem;
+    padding: 100px 5%;
     background: #000;
-    overflow: hidden;
+    overflow: hidden;}
 }
 
 .video-background {
@@ -1819,4 +1818,29 @@ blockquote {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+}
+
+/* CURSOR MÁQUINA DE ESCREVER (ALINHADO) */
+.cursor {
+    display: inline-block;
+    width: 4px;
+    height: 0.85em; /* Altura proporcional ao texto */
+    background-color: var(--gold);
+    animation: blink 1s infinite;
+    margin-left: 10px;
+    vertical-align: middle; /* Centraliza verticalmente */
+    position: relative;
+    top: -8px; /* Sobe um pouquinho para alinhar com as letras maiúsculas */
+}
+
+/* Garante que o texto digitado tenha altura fixa */
+.type-target {
+    min-height: 1em;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
