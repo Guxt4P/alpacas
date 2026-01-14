@@ -13,13 +13,14 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="scroll-progress"></div>
 
     <div id="loading-screen">
         <div class="loader-content">
@@ -42,6 +43,8 @@
             <li><a href="#home">INÍCIO</a></li>
             <li><a href="#about">A HISTÓRIA</a></li>
             <li><a href="#roster">ELENCO</a></li>
+            <li><a href="#stats">ESTATÍSTICAS</a></li>
+            <li><a href="#schedule">CALENDÁRIO</a></li>
             <li>
                 <a href="https://chat.whatsapp.com/D5YNbpvCjzxLEPeRu5jbYc" target="_blank" class="btn-cta">
                     <i data-lucide="message-circle" style="width:16px;"></i> SELETIVA 2025
@@ -60,9 +63,13 @@
         </div>
 
         <div class="hero-content">
-            <div class="match-badge fade-in">VITORIA RECENTE</div>
-            <h1 class="slide-in">WE ARE <br><span class="text-gold stroke-text">ALPACAS</span></h1>
-            
+            <div class="match-badge fade-in">VITÓRIA RECENTE</div>
+
+            <h1 class="slide-in">
+                WE ARE <br>
+                <span class="text-gold stroke-text type-target"></span><span class="cursor">|</span>
+            </h1>
+
             <div class="hero-scoreboard slide-in">
                 <div class="score-team">
                     <span class="team-name">ALPACAS</span>
@@ -84,6 +91,11 @@
                 </a>
             </div>
         </div>
+
+        <div class="scroll-indicator">
+            <span>EXPLORAR</span>
+            <i data-lucide="chevron-down"></i>
+        </div>
     </header>
 
     <div class="marquee-container">
@@ -104,6 +116,29 @@
             <span>Salto #3</span> <i data-lucide="zap"></i>
         </div>
     </div>
+
+    <section class="stats-highlight">
+        <div class="container">
+            <div class="stats-quick">
+                <div class="stat-quick-item fade-in">
+                    <div class="stat-quick-number" data-target="450">0</div>
+                    <div class="stat-quick-label">JOGADORES FORMADOS</div>
+                </div>
+                <div class="stat-quick-item fade-in">
+                    <div class="stat-quick-number" data-target="15">0</div>
+                    <div class="stat-quick-label">TÍTULOS CONQUISTADOS</div>
+                </div>
+                <div class="stat-quick-item fade-in">
+                    <div class="stat-quick-number" data-target="11">0</div>
+                    <div class="stat-quick-label">ANOS DE HISTÓRIA</div>
+                </div>
+                <div class="stat-quick-item fade-in">
+                    <div class="stat-quick-number" data-target="100">0</div>
+                    <div class="stat-quick-label">% DEDICAÇÃO</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="about" style="padding: 80px 5%; background: rgba(0,0,0,0.2);">
         <div class="container" style="display: flex; gap: 50px; flex-wrap: wrap; align-items: center;">
@@ -128,10 +163,73 @@
         </div>
     </section>
 
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h3>NOSSA JORNADA</h3>
+                <div class="line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h4>A FUNDAÇÃO</h4>
+                        <p>Nasce o Indaiatuba Alpacas. Um grupo de amigos, uma bola oval e o sonho de trazer o Flag Football para o interior.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h4>PRIMEIROS PASSOS</h4>
+                        <p>Estreia em campeonatos regionais. A primeira vitória oficial e a consolidação da identidade "Raça e Disciplina".</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h4>A REESTRUTURAÇÃO</h4>
+                        <p>Novo corpo técnico, novos uniformes e a expansão para categorias de base. O time se torna referência na região.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026</div>
+                        <h4>A NOVA ERA</h4>
+                        <p>Hoje somos mais que um time, somos uma família. Com estrutura profissional e atletas de elite, o céu é o limite.</p>
+                        <div style="margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+                            <small style="color: #666; font-style: italic;">"Para sempre Salto #3"</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playlist" class="spotify-section fade-in">
+        <div class="container spotify-container">
+            <div class="spotify-text">
+                <h4 class="text-gold">GAME DAY VIBES</h4>
+                <h3>O SOM DO VESTIÁRIO</h3>
+                <p>A playlist oficial que embala nossos treinos e aquece para as vitórias. Siga no Spotify.</p>
+            </div>
+            <div class="spotify-embed">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
     <section id="roster" class="roster-section">
         <div class="section-header">
             <h3>NOSSO ELENCO</h3>
             <div class="line"></div>
+        </div>
+
+        <div class="roster-search-container">
+            <input type="text" id="player-search" placeholder="🔍 Buscar jogador pelo nome ou número...">
         </div>
 
         <div class="roster-filters">
@@ -144,7 +242,7 @@
         <div class="roster-group fade-in" data-category="staff">
             <h4 class="position-title">COMISSÃO TÉCNICA</h4>
             <div class="roster-grid">
-                <div class="player-card">
+                <div class="player-card" data-name="COIÓ" data-number="53">
                     <div class="card-top">HC</div>
                     <div class="card-image"><div class="img-placeholder"></div></div>
                     <div class="card-info"><h4>#53 COIÓ</h4><p>Head Coach</p></div>
@@ -155,69 +253,69 @@
         <div class="roster-group fade-in" data-category="attack">
             <h4 class="position-title">QUARTERBACKS (QB)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#11 JEAN</h4><p>Quarterback</p></div></div>
-                <div class="player-card"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#15 RICARDO</h4><p>Quarterback</p></div></div>
-                <div class="player-card"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#19 RICHARD</h4><p>Quarterback</p></div></div>
+                <div class="player-card" data-name="JEAN" data-number="11"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#11 JEAN</h4><p>Quarterback</p></div></div>
+                <div class="player-card" data-name="RICARDO" data-number="15"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#15 RICARDO</h4><p>Quarterback</p></div></div>
+                <div class="player-card" data-name="RICHARD" data-number="19"><div class="card-top">QB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#19 RICHARD</h4><p>Quarterback</p></div></div>
             </div>
 
             <h4 class="position-title">RECEBEDORES (WR)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#05 THOM</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#07 CESTARI</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#09 DIAS</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#14 BROCA</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#17 RAFA</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#18 TURATI</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#22 PORTINHO</h4><p>Wide Receiver</p></div></div>
-                <div class="player-card"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#42 BRANDÃO</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="THOM" data-number="05"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#05 THOM</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="CESTARI" data-number="07"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#07 CESTARI</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="DIAS" data-number="09"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#09 DIAS</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="BROCA" data-number="14"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#14 BROCA</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="RAFA" data-number="17"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#17 RAFA</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="TURATI" data-number="18"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#18 TURATI</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="PORTINHO" data-number="22"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#22 PORTINHO</h4><p>Wide Receiver</p></div></div>
+                <div class="player-card" data-name="BRANDÃO" data-number="42"><div class="card-top">WR</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#42 BRANDÃO</h4><p>Wide Receiver</p></div></div>
             </div>
 
             <h4 class="position-title">TIGHT ENDS (TE)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#51 PEZÃO</h4><p>Tight End</p></div></div>
-                <div class="player-card"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#56 ITÁLIA</h4><p>Tight End</p></div></div>
-                <div class="player-card"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#87 RENATÃO</h4><p>Tight End</p></div></div>
+                <div class="player-card" data-name="PEZÃO" data-number="51"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#51 PEZÃO</h4><p>Tight End</p></div></div>
+                <div class="player-card" data-name="ITÁLIA" data-number="56"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#56 ITÁLIA</h4><p>Tight End</p></div></div>
+                <div class="player-card" data-name="RENATÃO" data-number="87"><div class="card-top">TE</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#87 RENATÃO</h4><p>Tight End</p></div></div>
             </div>
 
             <h4 class="position-title">LINHA OFENSIVA (OL)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#63 LÉO</h4><p>Offensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">C</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#77 GB</h4><p>Center</p></div></div>
-                <div class="player-card"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#90 MAYNARDES</h4><p>Offensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#91 GOLIAS</h4><p>Offensive Line</p></div></div>
+                <div class="player-card" data-name="LÉO" data-number="63"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#63 LÉO</h4><p>Offensive Line</p></div></div>
+                <div class="player-card" data-name="GB" data-number="77"><div class="card-top">C</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#77 GB</h4><p>Center</p></div></div>
+                <div class="player-card" data-name="MAYNARDES" data-number="90"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#90 MAYNARDES</h4><p>Offensive Line</p></div></div>
+                <div class="player-card" data-name="GOLIAS" data-number="91"><div class="card-top">OL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#91 GOLIAS</h4><p>Offensive Line</p></div></div>
             </div>
         </div>
 
         <div class="roster-group fade-in" data-category="defense">
             <h4 class="position-title">LINHA DEFENSIVA (DL)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#05 JAY-Z</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#35 REIS</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#60 BABY</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#66 PRIMO</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#69 SHAZAN</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#86 GUS</h4><p>Defensive Line</p></div></div>
-                <div class="player-card"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#98 BAHIA</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="JAY-Z" data-number="05"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#05 JAY-Z</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="REIS" data-number="35"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#35 REIS</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="BABY" data-number="60"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#60 BABY</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="PRIMO" data-number="66"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#66 PRIMO</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="SHAZAN" data-number="69"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#69 SHAZAN</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="GUS" data-number="86"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#86 GUS</h4><p>Defensive Line</p></div></div>
+                <div class="player-card" data-name="BAHIA" data-number="98"><div class="card-top">DL</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#98 BAHIA</h4><p>Defensive Line</p></div></div>
             </div>
 
             <h4 class="position-title">LINEBACKERS (LB)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#08 MORENO</h4><p>Linebacker</p></div></div>
-                <div class="player-card"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#10 NINJA</h4><p>Linebacker</p></div></div>
-                <div class="player-card"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#13 LUDS</h4><p>Linebacker</p></div></div>
-                <div class="player-card"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#29 SÃO PAULO</h4><p>Linebacker</p></div></div>
-                <div class="player-card"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#81 SOLDADO</h4><p>Linebacker</p></div></div>
+                <div class="player-card" data-name="MORENO" data-number="08"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#08 MORENO</h4><p>Linebacker</p></div></div>
+                <div class="player-card" data-name="NINJA" data-number="10"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#10 NINJA</h4><p>Linebacker</p></div></div>
+                <div class="player-card" data-name="LUDS" data-number="13"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#13 LUDS</h4><p>Linebacker</p></div></div>
+                <div class="player-card" data-name="SÃO PAULO" data-number="29"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#29 SÃO PAULO</h4><p>Linebacker</p></div></div>
+                <div class="player-card" data-name="SOLDADO" data-number="81"><div class="card-top">LB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#81 SOLDADO</h4><p>Linebacker</p></div></div>
             </div>
 
             <h4 class="position-title">DEFENSIVE BACKS (DB)</h4>
             <div class="roster-grid">
-                <div class="player-card"><div class="card-top">SF</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#12 MOHAMED</h4><p>Safety</p></div></div>
-                <div class="player-card"><div class="card-top">CB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#21 QUEIROZ</h4><p>Cornerback</p></div></div>
+                <div class="player-card" data-name="MOHAMED" data-number="12"><div class="card-top">SF</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#12 MOHAMED</h4><p>Safety</p></div></div>
+                <div class="player-card" data-name="QUEIROZ" data-number="21"><div class="card-top">CB</div><div class="card-image"><div class="img-placeholder"></div></div><div class="card-info"><h4>#21 QUEIROZ</h4><p>Cornerback</p></div></div>
             </div>
 
             <h4 class="position-title" style="border-color: #333; color: #666;">IN MEMORIAM</h4>
             <div class="roster-grid">
-                <div class="player-card tribute-card">
+                <div class="player-card tribute-card" data-name="SALTO" data-number="03">
                     <div class="card-top">★</div>
                     <div class="card-image" style="opacity: 0.7;"><div class="img-placeholder" style="background: #222; display:flex; align-items:center; justify-content:center;"><span style="font-size:3rem; font-family:var(--font-display); color:#444;">#3</span></div></div>
                     <div class="card-info"><h4 style="color:#888;">SALTO</h4><p style="color:#555;">Eterno</p><div class="tribute-badge">FOREVER</div></div>
@@ -302,22 +400,6 @@
             </div>
             
             <div class="gallery-grid">
-                <div class="gallery-item large fade-in">
-                    <img src="https://images.unsplash.com/photo-1628779238951-be2c9f256544?q=80" alt="Alpacas Huddle">
-                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>HUDDLE</span></div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1563205764-6e93537b856e?q=80" alt="Touchdown">
-                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>TOUCHDOWN</span></div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80" alt="Defense">
-                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>DEFESA SÓLIDA</span></div>
-                </div>
-                <div class="gallery-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80" alt="Training">
-                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>TREINOS</span></div>
-                </div>
                 <div class="gallery-item fade-in">
                     <img src="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?q=80" alt="Victory">
                     <div class="gallery-overlay"><i data-lucide="camera"></i> <span>FAMÍLIA</span></div>
@@ -569,8 +651,34 @@
         <i data-lucide="message-circle"></i>
     </a>
 
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Imagem expandida">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
     <script>lucide.createIcons();</script>
 
 </body>
-</html>
+</html> large fade-in">
+                    <img src="https://images.unsplash.com/photo-1628779238951-be2c9f256544?q=80" alt="Alpacas Huddle">
+                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>HUDDLE</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1563205764-6e93537b856e?q=80" alt="Touchdown">
+                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>TOUCHDOWN</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80" alt="Defense">
+                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>DEFESA SÓLIDA</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80" alt="Training">
+                    <div class="gallery-overlay"><i data-lucide="camera"></i> <span>TREINOS</span></div>
+                </div>
+                <div class="gallery-item
